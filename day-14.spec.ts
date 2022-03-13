@@ -7,39 +7,39 @@ it("should be able to re-order one tab alone", () => {
   // Arrange
   const originalTabs = [0, 1, 2, 3, 4];
   const selectedTabs = [2];
-  const moveTabsAfter = 4;
+  const moveBeforeTab = 4;
 
   // Act
-  const reordered = reorderTabs(originalTabs, selectedTabs, moveTabsAfter);
+  const reordered = reorderTabs(originalTabs, selectedTabs, moveBeforeTab);
 
   // Assert
-  expect(reordered).toEqual([0, 1, 3, 4, 2]);
+  expect(reordered).toEqual([0, 1, 3, 2, 4]);
 });
 
 it("should be able to re-order many contiguous tabs", () => {
   // Arrange
   const originalTabs = [0, 1, 2, 3, 4];
   const selectedTabs = [0, 1];
-  const moveTabsAfter = 3;
+  const moveBeforeTab = 3;
 
   // Act
-  const reordered = reorderTabs(originalTabs, selectedTabs, moveTabsAfter);
+  const reordered = reorderTabs(originalTabs, selectedTabs, moveBeforeTab);
 
   // Assert
-  expect(reordered).toEqual([2, 3, 0, 1, 4]);
+  expect(reordered).toEqual([2, 0, 1, 3, 4]);
 });
 
 it("should be able to re-order many non-contiguous tabs", () => {
   // Arrange
   const originalTabs = [0, 1, 2, 3, 4];
   const selectedTabs = [0, 2];
-  const moveTabsAfter = 3;
+  const moveBeforeTab = 3;
 
   // Act
-  const reordered = reorderTabs(originalTabs, selectedTabs, moveTabsAfter);
+  const reordered = reorderTabs(originalTabs, selectedTabs, moveBeforeTab);
 
   // Assert
-  expect(reordered).toEqual([1, 3, 0, 2, 4]);
+  expect(reordered).toEqual([1, 0, 2, 3, 4]);
 });
 
 // Property based tests
