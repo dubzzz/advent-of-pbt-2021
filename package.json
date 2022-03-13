@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "type": "commonjs",
+  "name": "advent-of-pbt-2021",
+  "version": "0.0.0",
+  "description": "Advent of Property Based Testing 2021 in TypeScript with solutions based on fast-check",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Nicolas DUBIEN <github@dubien.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^27.5.1",
+    "fast-check": "^2.23.0",
+    "jest": "^27.5.1",
+    "jest-extended": "^2.0.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended/all"
+    ]
+  },
+  "dependencies": {
+    "nonogram-solver": "^2.0.0"
+  }
+}
